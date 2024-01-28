@@ -17,22 +17,22 @@ In my recent pursuit of a career transition, I've dedicated significant time to 
 
 ## Knowledge
 
-### SQL:
+#### SQL:
 Proficient in SQL, I excel at querying relational databases to extract valuable insights. My expertise extends to database management, ensuring efficient data manipulation for analysis.
 
-### Python:
+#### Python:
 Skilled in Python, particularly in data manipulation using Pandas. I leverage Python for comprehensive data analysis, from statistical exploration to visual storytelling using libraries like Matplotlib and Seaborn.
 
-### Power BI:
+#### Power BI:
 With expertise in Power BI, I create interactive reports and dashboards that transform complex data into actionable insights. My skills include data modeling within the Power BI environment.
 
-### Tableau:
+#### Tableau:
 Tableau is my canvas for visual analytics and storytelling. I create visually impactful dashboards that not only provide insights but also communicate compelling narratives to enhance decision-making.
 
-### Excel:
+#### Excel:
 Proficient in advanced data analysis techniques in Excel, I leverage features like pivot tables and advanced formulas. Excel is my go-to tool for meticulous data cleaning and wrangling.
 
-### Google Sheets:
+#### Google Sheets:
 Skilled in Google Sheets, I facilitate collaborative data analysis and insights sharing. My expertise extends to cloud-based analytics, leveraging Google Sheets for real-time data access and collaborative decision-making.
 
 ## Projects
