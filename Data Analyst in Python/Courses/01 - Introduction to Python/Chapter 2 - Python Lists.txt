@@ -1,0 +1,129 @@
+1. Creating a list of areas
+# Define the sizes of different areas in square meters
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
+
+# Create a list called 'areas' with these sizes
+areas = [hall, kit, liv, bed, bath]
+
+# Print the list of areas
+print(areas)
+----------------------------------------------------------------------------------------------
+2. Adapting the list with labels
+# Define the sizes of different areas in square meters
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
+
+# Create a list called 'areas' with labels for each area
+areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "bathroom", bath]
+
+# Print the list of areas with labels
+print(areas)
+----------------------------------------------------------------------------------------------
+3. Creating a list of lists for house information
+# Define the sizes of different areas in square meters
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
+
+# Organize house information as a list of lists
+house = [["hallway", hall],
+         ["kitchen", kit],
+         ["living room", liv],
+         ["bedroom", bed],
+         ["bathroom", bath]]
+
+# Print the list of lists representing house information
+print(house)
+
+# Print the type of the 'house' variable
+print(type(house))
+----------------------------------------------------------------------------------------------
+4. Accessing elements in the list
+# Create a list containing areas and their labels
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Print the second element from the 'areas' list
+print(areas[1])
+
+# Print the last element from the 'areas' list
+print(areas[-1])
+
+# Print the size of the living room from the 'areas' list
+print(areas[5])
+----------------------------------------------------------------------------------------------
+5. Calculating the sum of specific areas
+
+# Create a list containing areas and their labels
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Calculate the sum of the kitchen and bedroom areas
+eat_sleep_area = areas[3] + areas[7]
+
+# Print the sum of the kitchen and bedroom areas
+print(eat_sleep_area)
+----------------------------------------------------------------------------------------------
+6. Slicing the list to create separate sections
+
+# Create a list containing areas and their labels
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create a 'downstairs' list and an 'upstairs' list
+downstairs = areas[:6]
+upstairs = areas[6:]
+
+# Print the 'downstairs' and 'upstairs' sections
+print(downstairs, upstairs)
+----------------------------------------------------------------------------------------------
+7. Alternative slicing to create separate sections
+
+# Create a list containing areas and their labels
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# An alternative way to create 'downstairs' and 'upstairs' using slicing
+downstairs = areas[:6]
+upstairs = areas[6:]
+----------------------------------------------------------------------------------------------
+8. Correcting and changing elements in the list
+
+# Create a list containing areas and their labels
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Correct the size of the bathroom and change the label of the living room
+areas[-1] = 10.50
+areas[4] = "chill zone"
+----------------------------------------------------------------------------------------------
+9. Adding new elements and creating variations
+
+# Existing list of areas and their sizes
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
+         "bedroom", 10.75, "bathroom", 10.50]
+
+# Add data for a poolhouse, creating a new list called areas_1
+areas_1 = areas + ["poolhouse", 24.5]
+
+# Add data for a garage, creating another new list called areas_2
+areas_2 = areas_1 + ["garage", 15.45]
+
+----------------------------------------------------------------------------------------------
+10. Creating a copy and modifying elements
+
+# Original list of areas and their sizes
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Create a copy of the original list called areas_copy
+areas_copy = list(areas)
+
+# Modify the first element in the copied list
+areas_copy[0] = 5.0
+
+# Print the original list to demonstrate it remains unchanged
+print(areas)

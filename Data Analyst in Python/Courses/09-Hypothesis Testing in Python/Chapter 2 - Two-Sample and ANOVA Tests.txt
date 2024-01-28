@@ -1,0 +1,134 @@
+1.Simple random sampling
+# Sample 70 rows using simple random sampling and set the seed
+attrition_samp = attrition_pop.sample(n=70,random_state=18900217)
+# Print the sample
+print(attrition_samp)
+-------------------------------------------------------------------------------------------------
+2.Two sample mean
+# Calculate the numerator of the test statistic
+import numpy as np
+
+numerator = xbar_no - xbar_yes
+
+# Calculate the denominator of the test statistic
+denominator = np.sqrt(s_no ** 2 / n_no + s_yes ** 2 / n_yes)
+
+
+# Calculate the test statistic
+t_stat = numerator / denominator
+
+# Print the test statistic
+print(t_stat)
+
+-------------------------------------------------------------------------------------------------
+3.p-value from t-stat
+# Calculate the degrees of freedom
+degrees_of_freedom = n_no+n_yes-2
+
+# Calculate the p-value from the test stat
+p_value = t.cdf(t_stat,df=degrees_of_freedom)
+# Print the p_value
+print(p_value)
+-------------------------------------------------------------------------------------------------
+4.Visualizing the difference
+# Calculate the differences from 2012 to 2016
+sample_dem_data['diff'] = sample_dem_data['dem_percent_12']-sample_dem_data['dem_percent_16']
+
+# Print sample_dem_data
+print(sample_dem_data)
+
+
+# Calculate the differences from 2012 to 2016
+sample_dem_data['diff'] = sample_dem_data['dem_percent_12'] - sample_dem_data['dem_percent_16']
+
+# Find the mean of the diff column
+xbar_diff = sample_dem_data['diff'].mean()
+
+# Print xbar_diff
+print(xbar_diff)
+
+
+
+# Calculate the differences from 2012 to 2016
+sample_dem_data['diff'] = sample_dem_data['dem_percent_12'] - sample_dem_data['dem_percent_16']
+
+# Find the mean of the diff column
+xbar_diff = sample_dem_data['diff'].mean()
+
+# Find the standard deviation of the diff column
+s_diff = sample_dem_data['diff'].std()
+
+# Print s_diff
+print(s_diff)
+
+
+
+# Calculate the differences from 2012 to 2016
+sample_dem_data['diff'] = sample_dem_data['dem_percent_12'] - sample_dem_data['dem_percent_16']
+
+# Find the mean of the diff column
+xbar_diff = sample_dem_data['diff'].mean()
+
+# Find the standard deviation of the diff column
+s_diff = sample_dem_data['diff'].std()
+
+# Plot a histogram of diff with 20 bins
+sample_dem_data['diff'].hist(bins=20)
+plt.show()
+-----------------------------------------------------------------------------------------------------
+5.Visualizing many categories
+# Calculate the mean pack_price for each shipment_mode
+xbar_pack_by_mode = late_shipments.groupby('shipment_mode')['pack_price'].mean()
+
+# Print the grouped means
+print(xbar_pack_by_mode)
+
+
+# Calculate the mean pack_price for each shipment_mode
+xbar_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].mean()
+
+# Calculate the standard deviation of the pack_price for each shipment_mode
+s_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].std()
+
+# Print the grouped standard deviations
+print(s_pack_by_mode)
+
+
+# Calculate the mean pack_price for each shipment_mode
+xbar_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].mean()
+
+# Calculate the standard deviation of the pack_price for each shipment_mode
+s_pack_by_mode = late_shipments.groupby("shipment_mode")['pack_price'].std()
+
+# Boxplot of shipment_mode vs. pack_price
+sns.boxplot(x="pack_price",y="shipment_mode", data=late_shipments)
+plt.show()
+-----------------------------------------------------------------------------------------------------
+6.ANOVA tests
+# Run an ANOVA for pack_price across shipment_mode
+anova_results = pingouin.anova(data=late_shipments,dv="pack_price",between="shipment_mode")
+
+# Print anova_results
+print(anova_results)
+
+-----------------------------------------------------------------------------------------------------
+7.Pairwise t-tests
+# Perform a pairwise t-test on pack price, grouped by shipment mode
+pairwise_results = pingouin.pairwise_tests(data=late_shipments, dv="pack_price",between="shipment_mode",padjust="none")
+
+# Print pairwise_results
+print(pairwise_results)
+
+
+
+
+# Modify the pairwise t-tests to use Bonferroni p-value adjustment
+pairwise_results = pingouin.pairwise_tests(data=late_shipments, 
+                                           dv="pack_price",
+                                           between="shipment_mode",
+                                           padjust="bonf")
+
+# Print pairwise_results
+print(pairwise_results)
+
+

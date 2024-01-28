@@ -1,0 +1,22 @@
+1.Sample mean
+# Print the late_shipments dataset
+print(late_shipments)
+
+
+# Print the late_shipments dataset
+print(late_shipments)
+
+# Calculate the proportion of late shipments
+late_prop_samp = (late_shipments['late'] == "Yes").mean()
+
+# Print the results
+print(late_prop_samp)
+-------------------------------------------------------------------------------------------------
+2.Confidence interval
+# Calculate 95% confidence interval using quantile method
+lower = np.quantile(late_shipments_boot_distn, 0.025)
+upper = np.quantile(late_shipments_boot_distn, 0.975)
+
+# Print the confidence interval
+print((lower, upper))
+

@@ -1,0 +1,43 @@
+1.Initial exploration
+# Print the first five rows of unemployment
+print(unemployment.head(5))
+
+
+# Print a summary of non-missing values and data types in the unemployment DataFrame
+print(unemployment.info())
+
+
+# Print summary statistics for numerical columns in unemployment
+print(unemployment.describe())
+-------------------------------------------------------------------------------------------------
+2.Validation
+# Define a Series describing whether each continent is outside of Oceania
+not_oceania = ~unemployment["continent"].isin(["Oceania"])
+
+# Define a Series describing whether each continent is outside of Oceania
+not_oceania = ~unemployment["continent"].isin(["Oceania"])
+
+# Print unemployment without records related to countries in Oceania
+print(unemployment[not_oceania])
+-------------------------------------------------------------------------------------------------
+3.Summarization
+# Print the mean and standard deviation of rates by year
+print(unemployment.agg(["mean", "std"]))
+
+
+# Print yearly mean and standard deviation grouped by continent
+print(unemployment.groupby("continent").agg(["mean", "std"]))
+-----------------------------------------------------------------------------------------------------
+4.Aggregation
+continent_summary = unemployment.groupby("continent").agg(
+    # Create the mean_rate_2021 column
+    mean_rate_2021 = ("2021","mean"),
+    # Create the std_rate_2021 column
+    std_rate_2021= ("2021","std"),
+)
+print(continent_summary)
+-----------------------------------------------------------------------------------------------------
+5.Visualization
+# Create a bar plot of continents and their average unemployment
+sns.barplot(x='continent',y='2021',data=unemployment)
+plt.show()

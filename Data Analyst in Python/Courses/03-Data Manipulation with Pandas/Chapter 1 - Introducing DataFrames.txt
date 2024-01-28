@@ -1,0 +1,78 @@
+1.Inspecting a DataFrame
+# Print the head of the homelessness data
+print(homelessness.head())
+-----------------------------------------------------------------------------------------
+2.Parts of a DataFrame
+# Import pandas using the alias pd
+import pandas as pd
+
+# Print the values of homelessness
+print(homelessness.values)
+
+# Print the column index of homelessness
+print(homelessness.columns)
+
+# Print the row index of homelessness
+print(homelessness.index)
+-----------------------------------------------------------------------------------------
+3.Sorting rows
+# Sort homelessness by individuals
+homelessness_ind = homelessness.sort_values("individuals").head()
+
+# Print the top few rows
+print(homelessness_ind)
+-----------------------------------------------------------------------------------------
+4.Subsetting columns
+# Select the individuals column
+individuals = homelessness["individuals"]
+
+# Print the head of the result
+print(individuals.head())
+----------------------------------------------------------------------------------------
+5.Susetting rows
+# Filter for rows where individuals is greater than 10000
+ind_gt_10k = homelessness[homelessness["individuals"]>10000]
+
+# See the result
+print(ind_gt_10k)
+
+# Filter for rows where region is Mountain
+mountain_reg = homelessness[homelessness["region"]=="Mountain"]
+
+# See the result
+print(mountain_reg)
+
+# Filter for rows where family_members is less than 1000 
+# and region is Pacific
+
+fam_lt_1k_pac = homelessness[(homelessness["family_members"] < 1000) & (homelessness["region"]=="Pacific")]
+
+# See the result
+print(fam_lt_1k_pac)
+----------------------------------------------------------------------------------------
+6.Subsetting rows by categorical variables
+# Subset for rows in South Atlantic or Mid-Atlantic regions
+south_mid_atlantic = homelessness[homelessness["region"].isin(["South Atlantic","Mid-Atlantic"])]
+# See the result
+print(south_mid_atlantic)
+
+
+# The Mojave Desert states
+canu = ["California", "Arizona", "Nevada", "Utah"]
+
+# Filter for rows in the Mojave Desert states
+mojave_homelessness = homelessness[homelessness["state"].isin(canu)]
+# See the result
+print(mojave_homelessness)
+
+----------------------------------------------------------------------------------------
+7.Adding new columns
+# Add total col as sum of individuals and family_members
+homelessness["total"] = homelessness["individuals"] + homelessness["family_members"]
+
+# Add p_individuals col as proportion of total that are individuals
+homelessness["p_individuals"] = homelessness["individuals"] / homelessness["total"]
+
+# See the result
+print(homelessness)
+

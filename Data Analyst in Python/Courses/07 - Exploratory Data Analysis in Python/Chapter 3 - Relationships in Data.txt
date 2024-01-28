@@ -1,0 +1,29 @@
+1.Importing
+# Import divorce.csv, parsing the appropriate columns as dates in the import
+divorce = pd.read_csv("divorce.csv",parse_dates=["marriage_date","divorce_date","dob_man","dob_woman"])
+print(divorce.dtypes)
+-------------------------------------------------------------------------------------------------
+2.Visualizing relationship
+# Define the marriage_year column
+divorce["marriage_year"] = divorce["marriage_date"].dt.year
+
+
+# Define the marriage_year column
+divorce["marriage_year"] = divorce["marriage_date"].dt.year
+
+# Create a line plot showing the average number of kids by year
+sns.lineplot(data=divorce, x="marriage_year",y="num_kids")
+plt.show()
+
+
+-------------------------------------------------------------------------------------------------
+3.Visualizing variables	relationships
+# Create the scatterplot
+sns.scatterplot(data=divorce,x="marriage_duration",y="num_kids")
+plt.show()
+-------------------------------------------------------------------------------------------------
+4.Categorial data
+# Create the scatter plot
+sns.scatterplot(data=divorce, x="woman_age_marriage", y="income_woman",hue="education_woman")
+plt.show()
+

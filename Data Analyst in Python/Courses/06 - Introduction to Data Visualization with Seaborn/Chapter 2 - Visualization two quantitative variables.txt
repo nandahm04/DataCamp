@@ -1,0 +1,43 @@
+
+
+# 1. Creating subplots with col and row
+sns.relplot(x="absences", y="G3", 
+            data=student_data,
+            kind="scatter", 
+            row="study_time")
+plt.show()
+-----------------------------------------------------------------------------------------
+# 2. Creating two-factor subplots
+sns.relplot(x="G1", y="G3", 
+            data=student_data,
+            kind="scatter", 
+            col="schoolsup",
+            row='famsup',
+            col_order=["yes", "no"],
+            row_order=['yes', 'no'])
+plt.show()
+-----------------------------------------------------------------------------------------
+# 3. Changing the size of scatter plot points
+sns.relplot(x="horsepower", y="mpg", 
+            data=mpg, kind="scatter", 
+            size="cylinders",
+            hue='cylinders')
+plt.show()
+-----------------------------------------------------------------------------------------
+# 4. Changing the style of scatter plot points
+sns.relplot(x='acceleration', y='mpg', data=mpg, kind='scatter', style='origin', hue='origin')
+plt.show()
+-----------------------------------------------------------------------------------------
+# 5. Interpreting line plots
+sns.relplot(x='model_year', y='mpg', data=mpg, kind='line')
+plt.show()
+-----------------------------------------------------------------------------------------
+# 6. Visualizing standard deviation with line plots
+sns.relplot(x="model_year", y="mpg", data=mpg, kind="line", ci='sd')
+plt.show()
+-----------------------------------------------------------------------------------------
+# 7. Plotting subgroups in line plots
+sns.relplot(x="model_year", y="horsepower", 
+            data=mpg, kind="line", ci=None, style="origin", hue="origin",
+            markers=True, dashes=False)
+plt.show()
