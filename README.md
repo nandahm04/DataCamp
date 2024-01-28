@@ -6,14 +6,14 @@ Welcome to my GitHub repository! I'm Nanda Haralalli Maheshwarappa, a passionate
 In my recent pursuit of a career transition, I've dedicated significant time to self-learning and skill development, backed by relevant certifications from DataCamp. My journey has taken me through diverse projects, from analyzing international debt datasets to exploring sports retail and gaming industry data. I specialize in tools like SQL, Python, Power BI, Tableau, Excel, and Google Sheets.
 
 ## Key Skills
-Data Wrangling and Cleaning
-Data Visualization
-Statistical Analysis
-Python Programming
-SQL Querying
-Power BI Reporting
-Tableau Visualization
-Excel and Google Sheets
+*Data Wrangling and Cleaning
+*Data Visualization
+*Statistical Analysis
+*Python Programming
+*SQL Querying
+*Power BI Reporting
+*Tableau Visualization
+*Excel and Google Sheets
 
 ## Knowledge
 
@@ -36,10 +36,10 @@ Proficient in advanced data analysis techniques in Excel, I leverage features li
 Skilled in Google Sheets, I facilitate collaborative data analysis and insights sharing. My expertise extends to cloud-based analytics, leveraging Google Sheets for real-time data access and collaborative decision-making.
 
 ## Projects
-Project 1: World Bank Debt Analysis
-Project 2: Sports Retail Data Analysis
-Project 3: Gaming Industry Insights
-Project 4: Job Market Analysis
+### Project 1: World Bank Debt Analysis
+### Project 2: Sports Retail Data Analysis
+### Project 3: Gaming Industry Insights
+### Project 4: Job Market Analysis
 
 ## Certifications
 
